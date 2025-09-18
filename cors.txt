@@ -1,0 +1,7 @@
+curl -H "Origin: http://example.com" -I https://example.com/wp-json/
+
+python CORScanner.py -u https://example.com -d -t 10
+
+cat example.coms.txt | httpx -silent | nuclei -t nuclei-templates/vulnerabilities/cors/ -o cors_results.txt
+
+curl -H "Origin: https://evil.com" -I https://example.com/api/data | grep -i "access-control-allow-origin: https://evil.com"

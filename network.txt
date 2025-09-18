@@ -1,0 +1,5 @@
+naabu -list ip.txt -c 50 -nmap-cli 'nmap -sV -SC' -o naabu-full.txt
+
+nmap -p- --min-rate 1000 -T4 -A example.com -oA fullscan
+
+masscan -p0-65535 example.com --rate 100000 -oG masscan-results.txt
