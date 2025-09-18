@@ -52,4 +52,4 @@ class DemoPOC(POCBase):
             output.fail('目标不存在漏洞')
         return output
 
-register_poc(DemoPOC)
+    register_poc(DemoPOC)
